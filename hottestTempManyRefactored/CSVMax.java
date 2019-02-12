@@ -1,7 +1,8 @@
 /**
  * Find the highest (hottest) temperature in any number of files of CSV weather data chosen by the user.
- * 
- * @author Duke Software Team 
+ *
+ * @author Moongee Cho
+ * @version 02/11/2019
  */
 import edu.duke.*;
 import org.apache.commons.csv.*;

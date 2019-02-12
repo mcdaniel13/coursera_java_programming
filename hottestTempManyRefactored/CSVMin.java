@@ -1,9 +1,9 @@
 
 /**
  * Write a description of CSVMin here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *
+ * @author Moongee Cho
+ * @version 02/11/2019
  */
 import edu.duke.*;
 import org.apache.commons.csv.*;
