@@ -1,5 +1,5 @@
 /**
- * Create a gray scale version of an image by setting all color components of each pixel to the same value.
+ * Create a inversion of an image by setting all color components of each pixel to the same value.
  * 
  * @author Moongee Cho
  * @version 1.0
