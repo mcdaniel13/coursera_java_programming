@@ -1,3 +1,8 @@
+/* author: Moongee Cho
+   date: 02/16/2019
+ */
+
+
 import edu.duke.*;
 
 public class WordLengths {
