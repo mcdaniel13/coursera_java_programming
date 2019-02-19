@@ -4,9 +4,8 @@ import java.util.*;
 public class CodonCount {
     private HashMap<String, Integer> codonMap;
 
-
     public CodonCount() {
-        codonMap = new HashMap<String, Integer>();
+        codonMap = new HashMap<>();
     }
 
     private void buildCodonMap(int start, String dna) {
@@ -49,13 +48,30 @@ public class CodonCount {
         int end = 5;
 
         buildCodonMap(0, dna);
-
         System.out.println("Reading frame starting with 0 results in "
-                            + codonMap.size() + " unique codons");
+                + codonMap.size() + " unique codons");
         System.out.println("and most common codon is " + getMostCommonCodon()
-                            + " with count " + codonMap.get(getMostCommonCodon()));
+                + " with count " + codonMap.get(getMostCommonCodon()));
         System.out.println("Counts of codons between " + start + " and "
-                            + end + "inclusive are: ");
+                + end + " inclusive are: ");
+        printCodonCounts(start, end);
+
+        buildCodonMap(1, dna);
+        System.out.println("Reading frame starting with 1 results in "
+                + codonMap.size() + " unique codons");
+        System.out.println("and most common codon is " + getMostCommonCodon()
+                + " with count " + codonMap.get(getMostCommonCodon()));
+        System.out.println("Counts of codons between " + start + " and "
+                + end + " inclusive are: ");
+        printCodonCounts(start, end);
+
+        buildCodonMap(2, dna);
+        System.out.println("Reading frame starting with 2 results in "
+                + codonMap.size() + " unique codons");
+        System.out.println("and most common codon is " + getMostCommonCodon()
+                + " with count " + codonMap.get(getMostCommonCodon()));
+        System.out.println("Counts of codons between " + start + " and "
+                + end + " inclusive are: ");
         printCodonCounts(start, end);
     }
 
