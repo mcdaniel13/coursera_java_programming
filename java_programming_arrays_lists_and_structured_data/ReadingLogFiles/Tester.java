@@ -24,8 +24,56 @@ public class Tester
         logAnalyzer.printAll();
     }
 
+    public void testUniqueIP() {
+        String filename = "short-test_log";
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+        logAnalyzer.readFile(filename);
+        System.out.println("Number of unique ip addresses is "
+                            + logAnalyzer.countUniqueIPs());
+
+    }
+
+    public void testAllHigherThanNum() {
+        String filename = "weblog1_log.txt";
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+        logAnalyzer.readFile(filename);
+        logAnalyzer.printAllHigherThanNum(400);
+    }
+
+    public void testUniqueIPVisitsOnDay() {
+        String filename = "weblog1_log.txt";
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+        logAnalyzer.readFile(filename);
+        ArrayList<String> uniqueIps = logAnalyzer.uniqueIPVisitsOnDay("Mar 24");
+        System.out.println("Number of unique IPs visited on day is " + uniqueIps.size());
+        for (String s : uniqueIps) {
+            System.out.println("Unique IP visited on day is " + s);
+        }
+    }
+
+    public void testUniqueIPsInRange() {
+        String filename = "weblog1_log.txt";
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+        logAnalyzer.readFile(filename);
+        System.out.println("Number of unique ip addresses in range is "
+                            + logAnalyzer.countUniqueIPsInRange(300, 399));
+    }
+
+    public void testCounts() {
+        String filename = "short-test_log";
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+        logAnalyzer.readFile(filename);
+        HashMap<String, Integer> counts = logAnalyzer.countVisitsPerIP();
+        System.out.println(counts);
+    }
+
     public static void main(String[] args) {
         Tester obj = new Tester();
-        obj.testLogAnalyzer();
+//        obj.testLogAnalyzer();
+        obj.testUniqueIP();
+//        obj.testAllHigherThanNum();
+//        obj.testUniqueIPVisitsOnDay();
+//        obj.testUniqueIPsInRange();
+//        obj.testCounts();
     }
 }
