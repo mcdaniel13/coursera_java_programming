@@ -67,13 +67,23 @@ public class Tester
         System.out.println(counts);
     }
 
+    public void testMostNumberVisitsByIP() {
+        String filename = "weblog3-short_log";
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+        logAnalyzer.readFile(filename);
+        HashMap<String, Integer> counts = logAnalyzer.countVisitsPerIP();
+        System.out.println("Most number visited IP Address is "
+                        + logAnalyzer.mostNumberVisitsByIP(counts));
+    }
+
     public static void main(String[] args) {
         Tester obj = new Tester();
 //        obj.testLogAnalyzer();
-        obj.testUniqueIP();
+//        obj.testUniqueIP();
 //        obj.testAllHigherThanNum();
 //        obj.testUniqueIPVisitsOnDay();
 //        obj.testUniqueIPsInRange();
 //        obj.testCounts();
+        obj.testMostNumberVisitsByIP();
     }
 }
